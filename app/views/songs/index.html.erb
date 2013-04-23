@@ -1,15 +1,15 @@
 <header>
-  <h1>MP3 Streaming Demo</h1>
+  <h1>Lectures and Audio Recordings</h1>
 </header>
 
 <div class="clear"></div>
 
 <section id="sidebar">
-  <h2>HTML5 Audio Player</h2>
+  <h2>Audio Player</h2>
   <section id="audio">
     No song is currently playing.
   </section>
-  <h2>Upload a Song</h2>
+  <h2>Upload a New Lecture</h2>
   <%= form_tag upload_path, :method => "post", :multipart => true do %>
     <%= file_field_tag "mp3file" %><br />
     <%= submit_tag "Upload" %>
@@ -22,6 +22,7 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= link_to song.key, download_url_for(song.key), :class => "html5" %></td>
+		<td><%= link_to "Torrent", torrent_url_for(song.key) %></td>
         <td><%= link_to "Delete",  "songs/delete/?song=" + song.key, :confirm => 'Are you sure you want to delete ' + song.key + '?' %></td>
       </tr>
     <% end %>
@@ -30,7 +31,9 @@
 
 <div class="clear"></div>
 
-<p>This Ruby on Rails app stores MP3 musics on Amazon S3 service and playes it
-  back on HTML5 build-in audio player.  Reference: <a href="http://net.tutsplus.com/tutorials/create-a-simple-music-streaming-app-with-ruby-on-rails/">Create
+<section id="footer">
+	<p>This is an open source project hosted on <%= link_to "Github", "https://github.com/itsgucci/mp3streaming" %> based on: <a href="http://net.tutsplus.com/tutorials/create-a-simple-music-streaming-app-with-ruby-on-rails/">Create
     a Simple Music Streaming App with Ruby on Rails</a></p>
-<p>Developed by SUN Li, 22nd Oct. 2012</p>
+	<p>Developed by drake, 21st Dec. 2012</p>
+</section>
+

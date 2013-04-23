@@ -13,15 +13,18 @@
  */
 
 #container {
-    width: 80%;
+    width: 63%;
     margin: 0 auto;
     background-color: #FFF;
     padding: 20px 40px;
     margin-top: 20px;
+	border-radius: 20px;
+	box-shadow: 10px 10px 5px #000;
 }
 
 body {
     background-color: #4B7399;
+	background: url('/assets/bg.jpg') center no-repeat fixed;
     font-family: Verdana, Helvetica, Arial;
     font-size: 14px;
 }
@@ -37,13 +40,17 @@ h1 {
 }
 
 #sidebar {
-    width: 50%;
+    width: 38%;
     float: left;
 }
 
 #main {
-    width: 50%;
+    width: 62%;
     float: left;
+}
+
+#footer {
+	margin-top:6em;
 }
 
 a, a:visited {

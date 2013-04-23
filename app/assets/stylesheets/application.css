@@ -23,10 +23,10 @@
 }
 
 body {
-    background-color: #4B7399;
-	background: url('/assets/bg.jpg') center no-repeat fixed;
+	background: url('/assets/bg.jpg') center top no-repeat fixed #192a34;
     font-family: Verdana, Helvetica, Arial;
     font-size: 14px;
+	color: green;
 }
 
 h1 {

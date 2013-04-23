@@ -60,8 +60,8 @@ module Mp3app
     config.assets.version = '1.0'
 
     AWS::S3::Base.establish_connection!(
-      :access_key_id => 'AKIAJEGLAT42VMCPK3XA',
-      :secret_access_key => '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'
+      :access_key_id => ENV['S3_KEY']
+      :secret_access_key => ENV['S3_SECRET']
       )
   end
 end
